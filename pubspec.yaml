@@ -1,0 +1,164 @@
+name: mobile
+description: A new Flutter application.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.0
+#  font_awesome_flutter: ^8.5.0
+  flutter_page_indicator: ^0.0.3
+  flutter_swiper: ^1.1.6
+  flutter_statusbarcolor: ^0.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/1.png
+    - assets/images/3.jpg
+    - assets/images/7.jpeg
+    - assets/images/10.jpg
+    - assets/images/abacus.png
+    - assets/images/artboard1.png
+    - assets/images/bag.jpeg
+    - assets/images/bcsm.png
+    - assets/images/bell.png
+    - assets/images/book.gif
+    - assets/images/broken-link1.png
+    - assets/images/calendar128.png
+    - assets/images/checksecondary61.gif
+    - assets/images/cloudpink.png
+    - assets/images/education_red-02.jpg
+    - assets/images/exam1.png
+    - assets/images/gif1.gif
+    - assets/images/gold-medal.png
+    - assets/images/hamayesh1.png
+    - assets/images/hamayeshs.png
+    - assets/images/hands-up1.png
+    - assets/images/modares1.png
+    - assets/images/mortarboard.png
+    - assets/images/myplan.jpeg
+    - assets/images/myplans.png
+    - assets/images/mytalars.png
+    - assets/images/mywork.jpeg
+    - assets/images/not.png
+    - assets/images/note.jpeg
+    - assets/images/picture1.png
+    - assets/images/question.png
+    - assets/images/reshte128.png
+    - assets/images/rocket6.png
+    - assets/images/school6.png
+    - assets/images/semi.png
+    - assets/images/shek.jpeg
+    - assets/images/student.png
+    - assets/images/student1.png
+    - assets/images/tadris1.png
+    - assets/images/talarha1.png
+    - assets/images/tap.png
+    - assets/images/tap1.png
+    - assets/images/uniyar.png
+    - assets/images/wallet1.png
+    - assets/images/wink.png
+    - assets/images/yes.png
+    - assets/images/zarf128.png
+    - assets/images/food/assian.png
+    - assets/images/food/assiani.png
+    - assets/images/food/breakfast.png
+    - assets/images/food/breakfasti.png
+    - assets/images/food/burger.png
+    - assets/images/food/burgeri.png
+    - assets/images/food/chicken_leg.png
+    - assets/images/food/chicken_legi.png
+    - assets/images/food/chineese.png
+    - assets/images/food/coffee_cup.png
+    - assets/images/food/coffee_cupi.png
+    - assets/images/food/heart.png
+    - assets/images/food/hearti.png
+    - assets/images/food/PageFirst1.jpg
+    - assets/images/food/PageFirst2.jpg
+    - assets/images/food/PageFirst3.jpg
+    - assets/images/food/PageFirst4.jpg
+    - assets/images/food/PageFirst5.jpg
+    - assets/images/food/PageFirst6.jpg
+    - assets/images/food/star.png
+    - assets/images/food1/129840935-sale.jpg
+    - assets/images/food1/f59f7de0.jpg
+    - assets/images/food1/Headwear.jpg
+    - assets/images/food1/organic-restaur.png
+    - assets/images/food1/spirit-ni.jpg
+    - assets/images/food1/summer.jpg
+    - assets/images/food1/unnamed.jpg
+    - assets/images/food1/Whats.jpeg
+    - assets/images/food1/wp1874172.jpg
+    - assets/images/food1/y4.jpg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+#   fonts:
+#     - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+#   fonts:
+#     - family: aviny
+#       fonts:
+#         - asset: assets/fonts/aviny.ttf
+#     - family: IRANSansMobile
+#       fonts:
+#         - asset: assets/fonts/IRANSansMobile.ttf
+#     - family: IRANYekanMobileRegular
+#       fonts:
+#         - asset: assets/fonts/IRANYekanMobileRegular.ttf
+#     - family: IRANYekanMobileThin
+#       fonts:
+#         - asset: assets/fonts/IRANYekanMobileThin.ttf
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
