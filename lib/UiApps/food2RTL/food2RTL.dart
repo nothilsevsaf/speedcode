@@ -13,7 +13,8 @@ class Food2RTL extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: WillPopScope(
         onWillPop: ()async{
-          await setStatus(Colors.white, false);
+          await statusSet(statusBar: Colors.transparent,
+              statusBarIsWhite: false);
           return true;
         },
         child: Scaffold(
@@ -47,7 +48,8 @@ class Food2RTL extends StatelessWidget {
                       SizedBox(height: 7,),
                       RawMaterialButton(
                         onPressed: () {
-                          setStatus(Colors.transparent,false);
+                          statusSet(statusBar: Colors.transparent,
+                              statusBarIsWhite: false);
                           go(context, Page2());
                         },
                         fillColor: Color.fromRGBO(228, 40, 61, 1),

@@ -1,4 +1,3 @@
-
 import 'dart:core';
 
 import 'package:flutter/cupertino.dart';
@@ -23,7 +22,8 @@ class _GestureDetectorExampleState extends State<GestureDetectorExample> {
         backgroundColor: Colors.white,
         elevation: 0,
         centerTitle: true,
-        title: Text('CUSTOM SLIDER',
+        title: Text(
+          'CUSTOM SLIDER',
           style: TextStyle(color: postitiveColor),
         ),
       ),
@@ -32,30 +32,27 @@ class _GestureDetectorExampleState extends State<GestureDetectorExample> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              percentage.round().toString()+' %',
+              percentage.round().toString() + ' %',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 70,
-                  color: postitiveColor
-              ),
+              style: TextStyle(fontSize: 70, color: postitiveColor),
             ),
             GestureDetector(
-              onPanStart: (DragStartDetails details){
+              onPanStart: (DragStartDetails details) {
                 initial = details.globalPosition.dx;
               },
-              onPanUpdate: (DragUpdateDetails details){
+              onPanUpdate: (DragUpdateDetails details) {
                 double distance = details.globalPosition.dx - initial;
                 double percentageAddition = distance / 200;
                 setState(() {
                   percentage = (percentage + percentageAddition).clamp(0, 100);
                 });
               },
-              onPanEnd: (DragEndDetails details){
+              onPanEnd: (DragEndDetails details) {
                 initial = 0;
               },
               child: CustomSlider(
                 percentage: this.percentage,
-                postitiveColor : postitiveColor,
+                postitiveColor: postitiveColor,
                 negetiveColor: negetiveColor,
               ),
             )
@@ -65,16 +62,14 @@ class _GestureDetectorExampleState extends State<GestureDetectorExample> {
     );
   }
 }
+
+// ignore: must_be_immutable
 class CustomSlider extends StatelessWidget {
   double totalWidth = 200;
   double percentage;
   Color postitiveColor;
   Color negetiveColor;
-  CustomSlider({
-    this.percentage,
-    this.postitiveColor,
-    this.negetiveColor
-  });
+  CustomSlider({this.percentage, this.postitiveColor, this.negetiveColor});
 
   @override
   Widget build(BuildContext context) {
@@ -83,21 +78,16 @@ class CustomSlider extends StatelessWidget {
       height: 30,
       decoration: BoxDecoration(
           color: negetiveColor,
-          border: Border.all(
-              color: Colors.black,
-              width: 2
-          )
-      ),
+          border: Border.all(color: Colors.black, width: 2)),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Container(
             color: postitiveColor,
-            width: (percentage/100)*totalWidth,
+            width: (percentage / 100) * totalWidth,
           )
         ],
       ),
     );
   }
 }
-

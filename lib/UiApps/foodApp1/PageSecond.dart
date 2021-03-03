@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'dataTypes.dart';
 
+// ignore: must_be_immutable
 class PageSecond extends StatelessWidget {
   PageController _pageController = new PageController();
   List<PageSecondData> slideList = [

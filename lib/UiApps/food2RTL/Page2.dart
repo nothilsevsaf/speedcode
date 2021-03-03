@@ -5,6 +5,7 @@ import '../../functions.dart';
 import 'Page3.dart';
 import 'dataTypes.dart';
 
+// ignore: must_be_immutable
 class Page2 extends StatelessWidget {
   int ind = 0;
 
@@ -30,7 +31,10 @@ class Page2 extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: WillPopScope(
         onWillPop: ()async{
-          await setStatus(Colors.transparent, true);
+          await statusSet(
+            statusBar: Colors.transparent,
+            statusBarIsWhite: true
+          );
           return true;
         },
         child: Scaffold(
@@ -91,7 +95,8 @@ class Page2 extends StatelessWidget {
                   child: Container(
                     child: Swiper(
                       onTap: (index) {
-                        setStatus(Colors.transparent,true);
+                        statusSet(statusBar: Colors.transparent,
+                            statusBarIsWhite: true);
                         go(context, Page3(
                           slideList[index].back,
                           slideList[index].image,

@@ -33,7 +33,8 @@ class Page3 extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: WillPopScope(
         onWillPop: ()async{
-          await setStatus(Colors.transparent, false);
+          await statusSet(statusBar: Colors.transparent,
+              statusBarIsWhite: false);
           return true;
         },
         child: Scaffold(

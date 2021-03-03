@@ -8,6 +8,7 @@ import 'dataTypes.dart';
 
 
 
+// ignore: must_be_immutable
 class FoodApp1 extends StatelessWidget {
   List<CateguryData> categurys = [
     CateguryData(ims + 'food/chicken_leg.png', 'Americans'),
@@ -66,7 +67,7 @@ class FoodApp1 extends StatelessWidget {
                             'Delivery address',
                             style: Theme.of(context)
                                 .textTheme
-                                .subhead
+                                .subtitle1
                                 .copyWith(color: Color.fromRGBO(0, 0, 0, 0.4)),
                           ),
                           Text(
@@ -210,7 +211,7 @@ class FoodApp1 extends StatelessWidget {
                               'Sorted By Fastest Delivery',
                               style: Theme.of(context)
                                   .textTheme
-                                  .subhead
+                                  .subtitle1
                                   .copyWith(
                                   fontSize: 15,
                                   color: Color.fromRGBO(0, 0, 0, 0.4)),

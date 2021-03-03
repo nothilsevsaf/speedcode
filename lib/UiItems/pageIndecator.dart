@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 
-import "package:transformer_page_view/transformer_page_view.dart";
-
-
-
 class PageIndecator extends StatefulWidget {
   PageIndecator({Key key, this.title}) : super(key: key);
 
@@ -62,8 +58,6 @@ class _RadioGroupState extends State<RadioGroup> {
 }
 
 class _PageIndecatorState extends State<PageIndecator> {
-  int _index = 1;
-
   double size = 20.0;
   double activeSize = 30.0;
 
@@ -73,7 +67,6 @@ class _PageIndecatorState extends State<PageIndecator> {
 
   List<PageIndicatorLayout> layouts = PageIndicatorLayout.values;
 
-
   @override
   void initState() {
     controller = new PageController();
@@ -82,7 +75,6 @@ class _PageIndecatorState extends State<PageIndecator> {
 
   @override
   void didUpdateWidget(PageIndecator oldWidget) {
-
     super.didUpdateWidget(oldWidget);
   }
 
@@ -115,36 +107,33 @@ class _PageIndecatorState extends State<PageIndecator> {
               }).toList(),
               onIndexChanged: (int index) {
                 setState(() {
-                  _index = index;
                   layout = layouts[index];
-
                 });
               },
             ),
             new Expanded(
                 child: new Stack(
-                  children: <Widget>[
-
-                    new PageView(
+              children: <Widget>[
+                new PageView(
+                  controller: controller,
+                  children: children,
+                ),
+                new Align(
+                  alignment: Alignment.bottomCenter,
+                  child: new Padding(
+                    padding: new EdgeInsets.only(bottom: 20.0),
+                    child: new PageIndicator(
+                      layout: layout,
+                      size: size,
+                      activeSize: activeSize,
                       controller: controller,
-                      children:children ,
+                      space: 5.0,
+                      count: 4,
                     ),
-                    new Align(
-                      alignment: Alignment.bottomCenter,
-                      child: new Padding(
-                        padding: new EdgeInsets.only(bottom: 20.0),
-                        child: new PageIndicator(
-                          layout: layout,
-                          size: size,
-                          activeSize:activeSize,
-                          controller: controller,
-                          space: 5.0,
-                          count: 4,
-                        ),
-                      ),
-                    )
-                  ],
-                ))
+                  ),
+                )
+              ],
+            ))
           ],
         ));
   }
