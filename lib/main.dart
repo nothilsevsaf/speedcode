@@ -3,11 +3,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'food2RTL/food2RTL.dart';
-import 'foodApp1/foodApp1.dart';
+import 'Ui Apps/food2RTL/food2RTL.dart';
+import 'Ui Apps/foodApp1/foodApp1.dart';
 import 'functions.dart';
-import 'page/GestureDetectorExample.dart';
-import 'page/pageIndecator.dart';
+import 'Ui Items/pageIndecator.dart';
 
 void main() => runApp(new MyApp());
 

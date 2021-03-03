@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import '../functions.dart';
+import '../../functions.dart';
 import 'dataTypes.dart';
 import 'Page2.dart';
 

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import '../functions.dart';
+import '../../functions.dart';
 import 'Page3.dart';
 import 'dataTypes.dart';
 
