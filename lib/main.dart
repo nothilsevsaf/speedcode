@@ -3,10 +3,10 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Ui Apps/food2RTL/food2RTL.dart';
-import 'Ui Apps/foodApp1/foodApp1.dart';
+import 'UiApps/food2RTL/food2RTL.dart';
+import 'UiApps/foodApp1/foodApp1.dart';
 import 'functions.dart';
-import 'Ui Items/pageIndecator.dart';
+import 'UiItems/pageIndecator.dart';
 
 void main() => runApp(new MyApp());
 
